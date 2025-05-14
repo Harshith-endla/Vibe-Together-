@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Room - VibeTogether</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="movie-room-page">
+    <header class="navbar">
+      <div class="logo">🎬 VibeTogether</div>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="musicroom.html">Music Room</a>
+        <a href="movieroom.html">Movie Room</a>
+        <a href="#">Chat</a>
+        <a href="#">Logout</a>
+      </nav>
+    </header>
+
+    <section class="movie-header">
+      <h1>🍿 Movie Room</h1>
+      <div class="search-container">
+        <input
+          type="text"
+          placeholder="Search a movie..."
+          id="searchMovieInput"
+        />
+        <input
+          type="text"
+          placeholder="Enter Vibe Code"
+          id="vibeMovieCodeInput"
+        />
+        <button class="join-btn">Join Vibe</button>
+      </div>
+    </section>
+
+    <section class="movie-gallery">
+      <div class="movie-card" data-title="Interstellar">
+        <img
+          src="https://m.media-amazon.com/images/I/81ni7NQhUoL._AC_SL1500_.jpg"
+          alt="Movie 1"
+        />
+        <p>Interstellar</p>
+      </div>
+      <div class="movie-card" data-title="Inception">
+        <img
+          src="https://m.media-amazon.com/images/I/91KkWf50SoL._AC_SL1500_.jpg"
+          alt="Movie 2"
+        />
+        <p>Inception</p>
+      </div>
+      <div class="movie-card" data-title="Avatar">
+        <img
+          src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SL1184_.jpg"
+          alt="Movie 3"
+        />
+        <p>Avatar</p>
+      </div>
+      <div class="movie-card" data-title="Spider-Man: No Way Home">
+        <img
+          src="https://m.media-amazon.com/images/I/81QPK7YBXML._AC_SL1500_.jpg"
+          alt="Movie 4"
+        />
+        <p>Spider-Man: No Way Home</p>
+      </div>
+    </section>
+    <script>
+      const searchInput = document.getElementById("searchMovieInput");
+      const movieCards = document.querySelectorAll(".movie-card");
+
+      searchInput.addEventListener("input", function () {
+        const query = this.value.toLowerCase();
+
+        movieCards.forEach((card) => {
+          const title = card.getAttribute("data-title").toLowerCase();
+          if (title.includes(query)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

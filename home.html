@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - VibeTogether</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="home-page">
+    <header class="navbar">
+      <div class="logo">🎵 VibeTogether</div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="musicroom.html">Music Room</a>
+        <a href="movieroom.html">Movie Room</a>
+        <a href="#">Chat</a>
+        <a href="#">Logout</a>
+      </nav>
+    </header>
+    <!--
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Connect. Watch. Vibe.</h1>
+        <p>Enjoy music and movies with friends from anywhere in the world.</p>
+        <a href="#" class="cta-btn">Start Vibing Now</a>
+      </div>
+    </section>
+    -->
+    <!--Music section in Home page-->
+    <section class="home-music-gallery">
+      <div class="home-album-card">
+        <img
+          src="https://i.scdn.co/image/ab67616d0000b2730b31f69f7957b8e037b0d2b8"
+          alt="Album 1"
+        />
+        <p>Chill Vibes</p>
+      </div>
+      <div class="home-album-card">
+        <img
+          src="https://i.scdn.co/image/ab67616d0000b273df30b8f8faef54aa7d9737a1"
+          alt="Album 2"
+        />
+        <p>Top Hits</p>
+      </div>
+      <div class="home-album-card">
+        <img
+          src="https://i.scdn.co/image/ab67616d0000b2737ed16f6f7f58d8c6fae8c234"
+          alt="Album 3"
+        />
+        <p>Lo-Fi Beats</p>
+      </div>
+      <div class="home-album-card">
+        <img
+          src="https://i.scdn.co/image/ab67616d0000b2738f63b2bb5ae927ffb276f8b1"
+          alt="Album 4"
+        />
+        <p>Retro Vibe</p>
+      </div>
+    </section>
+    <!--Code Generator content in Home page -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Connect. Watch. Vibe.</h1>
+        <p>Enjoy music and movies with friends from anywhere in the world.</p>
+        <!--
+        <div class="vibe-actions">
+          <button class="start-btn">Start Vibing Now</button>
+        </div>
+         -->
+        <div class="vibe-code-generator">
+          <h3>🎉 Create a Vibe Code</h3>
+          <input
+            type="text"
+            id="vibeCode"
+            placeholder="Enter a custom code or click Generate"
+          />
+          <button onclick="generateCode()">Generate</button>
+        </div>
+      </div>
+    </section>
+    <section class="movie-gallery">
+      <div class="movie-card" data-title="Inception">
+        <img
+          src="https://m.media-amazon.com/images/I/91KkWf50SoL._AC_SL1500_.jpg"
+          alt="Movie 2"
+        />
+        <p>Inception</p>
+      </div>
+      <div class="movie-card" data-title="Avengers: EndGame">
+        <img
+          src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SL1184_.jpg"
+          alt="Movie 3"
+        />
+        <p>Avengers: EndGame</p>
+      </div>
+    </section>
+
+    <script>
+      function generateCode() {
+        const code =
+          "VIBE-" + Math.random().toString(36).substring(2, 8).toUpperCase();
+        document.getElementById("vibeCode").value = code;
+      }
+    </script>
+  </body>
+</html>

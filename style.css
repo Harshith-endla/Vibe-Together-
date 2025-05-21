@@ -85,7 +85,7 @@ body {
 
 #signup-page h2 {
   font-size: 28px;
-  color: #32cd32; /* Lawn green */
+  color: #32cd32;
   margin-bottom: 20px;
 }
 
@@ -110,7 +110,7 @@ body {
 }
 
 #signup-page button {
-  background: #32cd32; /* Lime green */
+  background: #32cd32;
   cursor: pointer;
   transition: background 0.3s;
 }
@@ -143,12 +143,12 @@ a {
   text-decoration: none;
 }
 
-/* Additional Google Sign-In button styling */
+/* Adding Google Sign-In button */
 .google-btn .g_id_signin {
   width: 100%;
 }
 
-/* Home Page Styles */
+/* Home Page */
 #home-page {
   background-image: url("images/green_bg.jpg");
   background-size: cover;
@@ -163,7 +163,7 @@ a {
 
 /* Navigation bar */
 .navbar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -173,7 +173,7 @@ a {
   align-items: center;
   padding: 20px 40px;
   background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(5px); /* optional for a glassy effect */
+  backdrop-filter: blur(100px);
 }
 
 .navbar .logo {
@@ -193,6 +193,23 @@ a {
   color: #32cd32;
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
 /* Hero Section */
 .hero {
   display: flex;
@@ -201,11 +218,6 @@ a {
   text-align: center;
   padding: 30px;
   margin-bottom: 30px;
-  border-radius: 15px;
-}
-
-.home-music-gallery {
-  padding: 20px;
   border-radius: 15px;
 }
 
@@ -230,6 +242,7 @@ a {
   margin-bottom: 30px;
 }
 
+/*
 .cta-btn {
   padding: 12px 24px;
   font-size: 16px;
@@ -243,7 +256,7 @@ a {
 .cta-btn:hover {
   background-color: #28a428;
 }
-/*
+
 .vibe-actions {
   margin: 20px 0;
 }
@@ -262,6 +275,7 @@ a {
   background-color: #28a428;
 }
 */
+
 .vibe-code-generator {
   margin-top: 30px;
   text-align: center;
@@ -335,7 +349,8 @@ a {
   background-color: #28a428;
 }
 
-.music-gallery {
+.music-gallery,
+.home-music-gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -343,7 +358,7 @@ a {
   padding: 30px 20px;
 }
 
-.album-card,
+.music-card,
 .home-album-card {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
@@ -353,19 +368,19 @@ a {
   transition: transform 0.2s;
 }
 
-.album-card img,
+.music-card img,
 .home-album-card {
   width: 100%;
   border-radius: 10px;
 }
 
-.album-card p,
+.music-card p,
 .home-album-card {
   margin-top: 10px;
   font-weight: 500;
 }
 
-.album-card:hover,
+.music-card:hover,
 .home-album-card {
   transform: scale(1.05);
   background-color: rgba(255, 255, 255, 0.2);

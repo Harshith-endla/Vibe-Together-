@@ -13,87 +13,82 @@
         <a href="home.html">Home</a>
         <a href="musicroom.html">Music Room</a>
         <a href="movieroom.html">Movie Room</a>
-        <a href="#">Chat</a>
-        <a href="#">Logout</a>
+        <!--<a href="chatroom.html">Chat</a>-->
       </nav>
     </header>
-    <!--
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Connect. Watch. Vibe.</h1>
-        <p>Enjoy music and movies with friends from anywhere in the world.</p>
-        <a href="#" class="cta-btn">Start Vibing Now</a>
-      </div>
-    </section>
-    -->
-    <!--Music section in Home page-->
-    <section class="home-music-gallery">
-      <div class="home-album-card">
-        <img
-          src="https://i.scdn.co/image/ab67616d0000b2730b31f69f7957b8e037b0d2b8"
-          alt="Album 1"
-        />
-        <p>Chill Vibes</p>
-      </div>
-      <div class="home-album-card">
-        <img
-          src="https://i.scdn.co/image/ab67616d0000b273df30b8f8faef54aa7d9737a1"
-          alt="Album 2"
-        />
-        <p>Top Hits</p>
-      </div>
-      <div class="home-album-card">
-        <img
-          src="https://i.scdn.co/image/ab67616d0000b2737ed16f6f7f58d8c6fae8c234"
-          alt="Album 3"
-        />
-        <p>Lo-Fi Beats</p>
-      </div>
-      <div class="home-album-card">
-        <img
-          src="https://i.scdn.co/image/ab67616d0000b2738f63b2bb5ae927ffb276f8b1"
-          alt="Album 4"
-        />
-        <p>Retro Vibe</p>
-      </div>
-    </section>
-    <!--Code Generator content in Home page -->
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Connect. Watch. Vibe.</h1>
-        <p>Enjoy music and movies with friends from anywhere in the world.</p>
-        <!--
-        <div class="vibe-actions">
-          <button class="start-btn">Start Vibing Now</button>
+
+    <main
+      style="
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        gap: 20px;
+      "
+    >
+      <!-- Left: Music Cards -->
+      <aside style="flex: 1">
+        <div class="gallery">
+          <div class="card">
+            <img src="images/music/chill.jpeg" alt="chill" />
+            <p>Chill</p>
+          </div>
+          <div class="card">
+            <img src="images/music/gym.jpeg" alt="gym" />
+            <p>Gym</p>
+          </div>
+          <div class="card">
+            <img src="images/music/melody.jpg" alt="melody" />
+            <p>Melody</p>
+          </div>
+          <div class="card">
+            <img src="images/music/travel.png" alt="travel" />
+            <p>Travel</p>
+          </div>
         </div>
-         -->
-        <div class="vibe-code-generator">
-          <h3>🎉 Create a Vibe Code</h3>
-          <input
-            type="text"
-            id="vibeCode"
-            placeholder="Enter a custom code or click Generate"
-          />
-          <button onclick="generateCode()">Generate</button>
+      </aside>
+
+      <!-- Hero Content -->
+      <section class="hero" style="flex: 2">
+        <div class="hero-content">
+          <h1>Connect. Watch. Vibe.</h1>
+          <p>Enjoy music and movies with friends from anywhere in the world.</p>
+          <div class="vibe-code-generator">
+            <h3>🎉 Create a Vibe Code</h3>
+            <input
+              type="text"
+              id="vibeCode"
+              placeholder="Enter a custom code or click Generate"
+            />
+            <button onclick="generateCode()">Generate</button>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="movie-gallery">
-      <div class="movie-card" data-title="Inception">
-        <img
-          src="https://m.media-amazon.com/images/I/91KkWf50SoL._AC_SL1500_.jpg"
-          alt="Movie 2"
-        />
-        <p>Inception</p>
-      </div>
-      <div class="movie-card" data-title="Avengers: EndGame">
-        <img
-          src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SL1184_.jpg"
-          alt="Movie 3"
-        />
-        <p>Avengers: EndGame</p>
-      </div>
-    </section>
+      </section>
+
+      <!--Movie Content -->
+      <aside style="flex: 1">
+        <div class="gallery">
+          <div class="card">
+            <img src="images/movie/inception.jpg" alt="Inception" />
+            <p>Inception</p>
+          </div>
+          <div class="card">
+            <img src="images/movie/Avengers-Endgame.jpg" alt="EndGame" />
+            <p>Avengers: EndGame</p>
+          </div>
+          <div class="card">
+            <img
+              src="images/movie/fast-and-furious.jpg"
+              alt="fast-and-furious"
+            />
+            <p>Fast & Furious</p>
+          </div>
+          <div class="card">
+            <img src="images/movie/cars.jpg" alt="cars" />
+            <p>cars</p>
+          </div>
+        </div>
+      </aside>
+    </main>
 
     <script>
       function generateCode() {

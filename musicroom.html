@@ -13,49 +13,73 @@
         <a href="home.html">Home</a>
         <a href="musicroom.html">Music Room</a>
         <a href="movieroom.html">Movie Room</a>
-        <a href="#">Chat</a>
-        <a href="#">Logout</a>
+        <!--<a href="chatroom.html">Chat</a>-->
       </nav>
     </header>
 
     <section class="music-header">
       <h1>🎧 Music Room</h1>
       <div class="search-container">
-        <input type="text" placeholder="Search your vibe..." id="searchInput" />
+        <input
+          type="text"
+          placeholder="Search your vibe..."
+          id="searchMusicInput"
+        />
         <input type="text" placeholder="Enter Vibe Code" id="vibeCodeInput" />
         <button class="join-btn">Join Vibe</button>
       </div>
     </section>
 
     <section class="music-gallery">
-      <div class="album-card">
-        <img
-          src="https://i.scdn.co/image/ab67616d0000b2730b31f69f7957b8e037b0d2b8"
-          alt="Album 1"
-        />
+      <div class="music-card" data-title="chill">
+        <img src="images/music/chill.jpeg" alt="Album 1" />
         <p>Chill Vibes</p>
       </div>
-      <div class="album-card">
-        <img
-          src="https://i.scdn.co/image/ab67616d0000b273df30b8f8faef54aa7d9737a1"
-          alt="Album 2"
-        />
+      <div class="music-card" data-title="top-hit">
+        <img src="images/music/top-hit.webp" alt="Album 2" />
         <p>Top Hits</p>
       </div>
-      <div class="album-card">
-        <img
-          src="https://i.scdn.co/image/ab67616d0000b2737ed16f6f7f58d8c6fae8c234"
-          alt="Album 3"
-        />
+      <div class="music-card" data-title="Lo-Fi">
+        <img src="images/music/lo-fi.webp" alt="Album 3" />
         <p>Lo-Fi Beats</p>
       </div>
-      <div class="album-card">
-        <img
-          src="https://i.scdn.co/image/ab67616d0000b2738f63b2bb5ae927ffb276f8b1"
-          alt="Album 4"
-        />
+      <div class="music-card" data-title="Retro">
+        <img src="images/music/retro.jpg" alt="Album 4" />
         <p>Retro Vibe</p>
       </div>
+      <div class="music-card" data-title="Gym">
+        <img src="images/music/gym.jpeg" alt="Album 5" />
+        <p>Gym Vibes</p>
+      </div>
+      <div class="music-card" data-title="Melody">
+        <img src="images/music/melody.jpg" alt="Album 6" />
+        <p>Melody</p>
+      </div>
+      <div class="music-card" data-title="party">
+        <img src="images/music/party.jpeg" alt="Album 7" />
+        <p>Party</p>
+      </div>
+      <div class="music-card" data-title="Travel">
+        <img src="images/music/travel.png" alt="Album 8" />
+        <p>Travel Album</p>
+      </div>
     </section>
+    <script>
+      const searchInput = document.getElementById("searchMusicInput");
+      const musicCards = document.querySelectorAll(".music-card");
+
+      searchInput.addEventListener("input", function () {
+        const query = this.value.toLowerCase();
+
+        musicCards.forEach((card) => {
+          const title = card.getAttribute("data-title").toLowerCase();
+          if (title.includes(query)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    </script>
   </body>
 </html>
